@@ -1,4 +1,5 @@
 #include<stdio.h>//Must be noticed stuct has a whole function;
+
 #include<string.h>
 
     struct techer
