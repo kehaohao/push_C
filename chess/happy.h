@@ -8,8 +8,9 @@
 #define ST_Y   30
 #define SPACE  30
 
-#define BLACK 0x00000fff
+#define BLACK 0x00000000
 #define WHITE 0x00ffffff
+#define YELLOW 0x00cccc66
 typedef struct
 {
     int w;
@@ -36,4 +37,8 @@ int restore_bg(int x,int y);
 int mouse_doing(void);
 int chess_doing(void);
 int chess_put(int x,int y);
+int check(int x,int y);
+int chess_put(int x,int y);
+void reinit(void);
+void set_backgrond(u32_t color);
 #endif

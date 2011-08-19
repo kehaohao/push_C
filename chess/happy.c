@@ -15,17 +15,18 @@ char chess_board[X_NUM*Y_NUM];
 char player;
 u32_t current_color;
 
+
 int init_date()
 {
     int fd;
-    struct fb_var_screeninfo fb_var;
-    fd =open("/dev/fb0",O_RDWR);//打开内核里面的内容
+    struct fb_var_screeninfo fb_var; 
+    fd =open("/dev/fb0",O_RDWR);//打开内核里面屏幕设备文件中的内容
     if(fd < 0)
     {
        perror("open fb0");
        exit(0);
     }
-    if(ioctl(fd,FBIOGET_VSCREENINFO,&fb_var) < 0)
+    if(ioctl(fd,FBIOGET_VSCREENINFO,&fb_var) < 0)//将返回值为fd的设备文件中的信息映射到内存缓从区&fb_var中；如果映射成功，返回值大于0;
     {
         perror("ioctl");
 	exit(0);

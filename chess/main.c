@@ -26,7 +26,7 @@ int main(int argc, const char *argv[])
        }
      *///  fb_round(500,300,100,0x0000ff00);
         
-        print_board(0x00ff0000);
+        print_board(0x0000f00);
 /*	puts("please  place the location:\n");
 	scanf("%4d %4d",&W,&H);
 	fb_round(W,H,15,0x0000ff00);
